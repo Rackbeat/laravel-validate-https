@@ -1,0 +1,54 @@
+{
+	"name": "rackbeat/laravel-validate-https",
+	"description": "Simple validation rule for https urls. ",
+	"keywords": [
+		"laravel",
+		"validation",
+		"rule",
+		"https",
+		"secure",
+		"url"
+	],
+	"type": "library",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Lasse Rafn",
+			"email": "lasserafn@gmail.com"
+		},
+		{
+			"name": "Rackbeat",
+			"email": "open-source@rackbeat.com"
+		}
+	],
+	"require": {
+		"php": ">=7.1",
+		"illuminate/contracts": "^5.5|^5.6",
+		"illuminate/support": "^5.5|^5.6",
+		"illuminate/validation": "^5.5|^5.6"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^7.0",
+		"satooshi/php-coveralls": "^1.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Rackbeat\\Rules\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Rules\\Tests\\": "tests/"
+		}
+	},
+	"config": {
+		"sort-packages": true
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Rackbeat\\Rules\\ValidateHttpsServiceProvider"
+			]
+		}
+	}
+}
